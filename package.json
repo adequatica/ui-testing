@@ -1,0 +1,25 @@
+{
+  "name": "ui-testing",
+  "version": "1.0.0",
+  "description": "Testing UI with TypeScript",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/enotramone/api-testing"
+  },
+  "author": "Andrey Enin <enotramone@gmail.com>",
+  "license": "MIT",
+  "engines": {
+    "node": ">=12"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.24.2",
+    "prettier": "^2.4.1",
+    "typescript": "^4.4.3"
+  },
+  "scripts": {
+    "format": "npx prettier --write .",
+    "test": "playwright test --reporter=list",
+    "test:debug": "PWDEBUG=1 npm run playwright",
+    "test:install-deps": "playwright install chromium && playwright install-deps chromium"
+  }
+}
