@@ -12,12 +12,17 @@
     "node": ">=12"
   },
   "devDependencies": {
-    "@playwright/test": "^1.24.2",
+    "@playwright/test": "^1.25.1",
+    "@typescript-eslint/eslint-plugin": "^5.36.1",
+    "@typescript-eslint/parser": "^5.36.1",
+    "eslint": "^8.23.0",
     "prettier": "^2.4.1",
     "typescript": "^4.4.3"
   },
   "scripts": {
     "format": "npx prettier --write .",
+    "lint": "eslint '**/*.{js,ts}'",
+    "lint:fix": "eslint --fix '**/*.{js,ts}'",
     "test": "playwright test --reporter=list",
     "test:debug": "PWDEBUG=1 npm run playwright",
     "test:install-deps": "playwright install chromium && playwright install-deps chromium"
