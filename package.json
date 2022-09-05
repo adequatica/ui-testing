@@ -23,8 +23,8 @@
     "format": "npx prettier --write .",
     "lint": "eslint '**/*.{js,ts}'",
     "lint:fix": "eslint --fix '**/*.{js,ts}'",
-    "test": "playwright test --reporter=list",
-    "test:debug": "PWDEBUG=1 npm run playwright",
+    "test": "playwright test",
+    "test:debug": "PWDEBUG=1 playwright test",
     "test:install-deps": "playwright install chromium && playwright install-deps chromium"
   }
 }

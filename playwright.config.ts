@@ -3,7 +3,7 @@ import { PlaywrightTestConfig, devices } from '@playwright/test';
 const baseURL = process.env.BASE_URL || 'https://home.cern';
 
 /**
- * See https://playwright.dev/docs/test-configuration.
+ * See https://playwright.dev/docs/test-configuration
  */
 const config: PlaywrightTestConfig = {
   testDir: './tests',
