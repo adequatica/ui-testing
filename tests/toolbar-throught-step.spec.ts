@@ -13,7 +13,7 @@ test('Home page toolbar', async ({ page }) => {
   await test.step('Should have proper page title', async () => {
     // Failed soft assertions do not terminate test execution, but mark the test as failed.
     // See https://playwright.dev/docs/test-assertions#soft-assertions
-    await expect(page, 'Should have "Home" in title').toHaveTitle(/Home/);
+    await expect.soft(page, 'Should have "Home" in title').toHaveTitle(/Home/);
   });
 
   await test.step('Should have toolbar', async () => {
