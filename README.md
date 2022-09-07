@@ -27,14 +27,16 @@ Example web site for testing: [CERN](https://home.cern).
 
 `npm run test:debug`
 
-- Run a single test (for example: `toolbar-throught-steps.spec.ts`):
+- Run a single test (for example: `switch-language.spec.ts`):
 
-`npm run test tests/toolbar-throught-steps.spec.ts`
+`npm run test tests/switch-language.spec.ts`
 
 Or:
 
-`npm run test -- --grep toolbar`
+`npm run test -- --grep language`
 
 ## Exaples of Test Cases
 
-- `toolbar.spec.ts`;
+- `switch-language.spec.ts` — has example of [test.fixme()](https://playwright.dev/docs/api/class-test#test-fixme-2) method;
+- `toolbar-throught-describe.spec.ts` — has example of [test.describe.configure()](https://playwright.dev/docs/api/class-test#test-describe-configure) method;
+- `toolbar-throught-step.spec.ts` — has examples of [test.slow()](https://playwright.dev/docs/api/class-test#test-slow-1) and [test.step()](https://playwright.dev/docs/api/class-test#test-step) methods.
