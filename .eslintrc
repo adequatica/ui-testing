@@ -6,5 +6,9 @@
     "eslint:recommended",
     "plugin:@typescript-eslint/eslint-recommended",
     "plugin:@typescript-eslint/recommended"
-  ]
+  ],
+  "rules": {
+    // https://eslint.org/docs/latest/rules/comma-dangle#always-multiline
+    "comma-dangle": ["error", "always-multiline"]
+  }
 }
