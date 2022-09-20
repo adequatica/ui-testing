@@ -9,6 +9,10 @@ test.beforeAll(async ({ browser }) => {
   page = await context.newPage();
 });
 
+test.afterAll(async () => {
+  await page.close();
+});
+
 test.describe('Switch language', async () => {
   // Running tests sequentially.
   // See https://playwright.dev/docs/api/class-test#test-describe-configure
