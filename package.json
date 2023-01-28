@@ -4,20 +4,22 @@
   "description": "Testing UI with TypeScript",
   "repository": {
     "type": "git",
-    "url": "https://github.com/enotramone/api-testing"
+    "url": "https://github.com/adequatica/api-testing"
   },
   "author": "Andrey Enin <enotramone@gmail.com>",
   "license": "MIT",
   "engines": {
-    "node": ">=12"
+    "node": ">=14"
+  },
+  "dependencies": {
+    "@playwright/test": "^1.30.0"
   },
   "devDependencies": {
-    "@playwright/test": "^1.25.1",
-    "@typescript-eslint/eslint-plugin": "^5.36.1",
-    "@typescript-eslint/parser": "^5.36.1",
-    "eslint": "^8.23.0",
-    "prettier": "^2.4.1",
-    "typescript": "^4.4.3"
+    "@typescript-eslint/eslint-plugin": "^5.49.0",
+    "@typescript-eslint/parser": "^5.49.0",
+    "eslint": "^8.32.0",
+    "prettier": "^2.8.3",
+    "typescript": "^4.9.4"
   },
   "scripts": {
     "format": "npx prettier --write .",

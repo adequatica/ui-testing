@@ -41,4 +41,4 @@ Or:
 - `toolbar-throught-describe.spec.ts` — has example of [test.describe.configure()](https://playwright.dev/docs/api/class-test#test-describe-configure) method;
 - `toolbar-throught-step.spec.ts` — has examples of [test.slow()](https://playwright.dev/docs/api/class-test#test-slow-1), [test.step()](https://playwright.dev/docs/api/class-test#test-step) and [expect.soft()](https://playwright.dev/docs/test-assertions#soft-assertions) methods.
 
-This test cases also illustrate the article [Hidden Gems of Playwright](https://adequatica.medium.com/hidden-gems-of-playwright-68fcf8896bcb).
+These test cases also illustrate the article [Hidden Gems of Playwright](https://adequatica.medium.com/hidden-gems-of-playwright-68fcf8896bcb).
