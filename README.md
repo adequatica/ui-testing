@@ -2,7 +2,7 @@
 
 ## Stack
 
-A basic set of packages to test API with TypeScript:
+A basic set of packages to test UI with TypeScript:
 
 - [Playwright](https://playwright.dev) — testing framework;
 - [Prettier](https://prettier.io) — code formatter;

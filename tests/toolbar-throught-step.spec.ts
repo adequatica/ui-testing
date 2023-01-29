@@ -1,5 +1,5 @@
 import { test, expect } from '@playwright/test';
-import { CernToolbar } from './models/toolbar';
+import { CernToolbar } from '../models/toolbar';
 
 test.afterAll(async ({ page }) => {
   await page.close();
