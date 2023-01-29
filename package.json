@@ -4,7 +4,7 @@
   "description": "Testing UI with TypeScript",
   "repository": {
     "type": "git",
-    "url": "https://github.com/adequatica/api-testing"
+    "url": "https://github.com/adequatica/ui-testing"
   },
   "author": "Andrey Enin <enotramone@gmail.com>",
   "license": "MIT",
