@@ -6,16 +6,18 @@ test.afterAll(async ({ page }) => {
 });
 
 test('Home page toolbar', async ({ page }) => {
-  // Slow test will be given triple the default timeout.
+  // Slow test will be given triple the default timeout
   // See https://playwright.dev/docs/api/class-test#test-slow-1
   test.slow();
 
+  // Test steps
+  // See https://playwright.dev/docs/api/class-test#test-step
   await test.step('Open the page', async () => {
     await page.goto('/');
   });
 
   await test.step('Should have proper page title', async () => {
-    // Failed soft assertions do not terminate test execution, but mark the test as failed.
+    // Failed soft assertions do not terminate test execution, but mark the test as failed
     // See https://playwright.dev/docs/test-assertions#soft-assertions
     await expect.soft(page, 'Should have "Home" in title').toHaveTitle(/Home/);
   });

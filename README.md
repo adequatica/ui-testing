@@ -6,7 +6,7 @@ A basic set of packages to test UI with TypeScript:
 
 - [Playwright](https://playwright.dev) — testing framework;
 - [Prettier](https://prettier.io) — code formatter;
-- [ESLint](https://eslint.org/) – code linter.
+- [ESLint](https://eslint.org/) — code linter.
 
 Example web site for testing: [CERN](https://home.cern).
 
