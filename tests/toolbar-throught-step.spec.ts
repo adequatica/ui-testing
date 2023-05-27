@@ -1,10 +1,6 @@
 import { test, expect } from '@playwright/test';
 import { CernToolbar } from '../models/toolbar';
 
-test.afterAll(async ({ page }) => {
-  await page.close();
-});
-
 test('Home page toolbar', async ({ page }) => {
   // Slow test will be given triple the default timeout
   // See https://playwright.dev/docs/api/class-test#test-slow-1
