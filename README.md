@@ -1,4 +1,4 @@
-# UI Testing with TypeScript
+# UI Testing with TypeScript and Playwright 
 
 ## Stack
 
@@ -8,7 +8,7 @@ A basic set of packages to test UI with TypeScript:
 - [Prettier](https://prettier.io) — code formatter;
 - [ESLint](https://eslint.org/) — code linter.
 
-Example web site for testing: [CERN](https://home.cern).
+Example website for testing: [CERN](https://home.cern).
 
 ## How to Use
 
@@ -35,7 +35,7 @@ Or:
 
 `npm run test -- --grep language`
 
-## Exaples of Test Cases
+## Examples of Test Cases
 
 - `switch-language.spec.ts` — has example of [test.fixme()](https://playwright.dev/docs/api/class-test#test-fixme-2) method;
 - `toolbar-throught-describe.spec.ts` — has example of [test.describe.configure()](https://playwright.dev/docs/api/class-test#test-describe-configure) method;
