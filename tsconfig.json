@@ -2,6 +2,11 @@
   "include": ["tests", "./playwright.config.ts", "models"],
   "compilerOptions": {
     "esModuleInterop": true,
-    "strict": true
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+
+    // This fix TS error for async/await:
+    // An async function or method in ES5/ES3 requires the "Promise" constructor.
+    "lib": ["es2015"]
   }
 }

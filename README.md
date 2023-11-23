@@ -1,4 +1,4 @@
-# UI Testing with TypeScript and Playwright 
+# UI Testing with TypeScript and Playwright
 
 ## Stack
 

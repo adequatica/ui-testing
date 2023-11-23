@@ -1,6 +1,9 @@
 {
   "root": true,
   "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "project": ["tsconfig.json"]
+  },
   "plugins": ["@typescript-eslint"],
   "extends": [
     "eslint:recommended",
@@ -9,6 +12,7 @@
   ],
   "rules": {
     // https://eslint.org/docs/latest/rules/comma-dangle#always-multiline
-    "comma-dangle": ["error", "always-multiline"]
+    "comma-dangle": ["error", "always-multiline"],
+    "@typescript-eslint/no-floating-promises": ["error"]
   }
 }

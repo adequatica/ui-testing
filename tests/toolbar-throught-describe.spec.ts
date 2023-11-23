@@ -35,7 +35,7 @@ test.describe('Home page toolbar', async () => {
     const toolbar = new CernToolbar(page);
     const toolbarH1 = await toolbar.getToolbarH1();
     await expect(toolbarH1, 'Should have "CERN" in toolbar title').toHaveText(
-      /CERN/
+      /CERN/,
     );
   });
 });

@@ -27,7 +27,7 @@ test.describe('Switch language', async () => {
     const toolbarH1 = await toolbar.getToolbarH1();
     await expect(
       toolbarH1,
-      'Should have "Accelerating science" in toolbar title'
+      'Should have "Accelerating science" in toolbar title',
     ).toHaveText(/Accelerating science/);
   });
 
@@ -54,7 +54,7 @@ test.describe('Switch language', async () => {
     const toolbarH1 = await toolbar.getToolbarH1();
     await expect(
       toolbarH1,
-      'Should have "Accélérateur de science" in toolbar title'
+      'Should have "Accélérateur de science" in toolbar title',
     ).toHaveText(/Accélérateur de science/);
   });
 
