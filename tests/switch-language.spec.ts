@@ -32,21 +32,21 @@ test.describe('Switch language', async () => {
   });
 
   test('Should have english language in navigation', async () => {
-    const lang = new CernLanguageSwitcher(page);
-    const langEn = await lang.getLang();
-    await expect(langEn, 'Should have "EN" language').toHaveText(/en/);
+    const languageSwitcher = new CernLanguageSwitcher(page);
+    const lang = await languageSwitcher.getLang();
+    await expect(lang, 'Should have "EN" language').toHaveText(/en/);
   });
 
   test('Should change URL after switch language', async () => {
-    const lang = new CernLanguageSwitcher(page);
-    await lang.switchLang();
+    const languageSwitcher = new CernLanguageSwitcher(page);
+    await languageSwitcher.switchLang('french');
     await expect(page).toHaveURL(/fr/);
   });
 
   test('Should have french language in navigation', async () => {
-    const lang = new CernLanguageSwitcher(page);
-    const langEn = await lang.getLang();
-    await expect(langEn, 'Should have "FR" language').toHaveText(/fr/);
+    const languageSwitcher = new CernLanguageSwitcher(page);
+    const lang = await languageSwitcher.getLang();
+    await expect(lang, 'Should have "FR" language').toHaveText(/fr/);
   });
 
   test('Should have french toolbar title', async () => {

@@ -38,6 +38,7 @@ Or:
 ## Examples of Test Cases
 
 - `switch-language.spec.ts` — has example of [test.fixme()](https://playwright.dev/docs/api/class-test#test-fixme-2) method;
+- `toolbar-mobile.spec.ts` — has example of redefining the [browser context](https://playwright.dev/docs/api/class-browsercontext);
 - `toolbar-throught-describe.spec.ts` — has example of [test.describe.configure()](https://playwright.dev/docs/api/class-test#test-describe-configure) method;
 - `toolbar-throught-step.spec.ts` — has examples of [test.slow()](https://playwright.dev/docs/api/class-test#test-slow-1), [test.step()](https://playwright.dev/docs/api/class-test#test-step) and [expect.soft()](https://playwright.dev/docs/test-assertions#soft-assertions) methods.
 

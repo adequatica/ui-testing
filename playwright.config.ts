@@ -22,7 +22,10 @@ const config: PlaywrightTestConfig = {
   retries: process.env.CI ? 1 : 0,
   /* Opt out of parallel tests on CI. */
   workers: process.env.CI ? 1 : undefined,
-  /* The maximum number of test failures for the whole test suite run. */
+  /**
+   * The maximum number of test failures for the whole test suite run.
+   * See https://playwright.dev/docs/api/class-testconfig#test-config-max-failures.
+   */
   maxFailures: process.env.CI ? 10 : undefined,
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
   reporter: [
@@ -50,7 +53,8 @@ const config: PlaywrightTestConfig = {
   /* Configure projects for major browsers. */
   projects: [
     {
-      name: 'chromium',
+      /* Extra field in case of a single project. */
+      // name: 'chromium',
       use: {
         ...devices['Desktop Chrome'],
       },
