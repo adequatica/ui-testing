@@ -1,4 +1,5 @@
-import { test, expect, Page } from '@playwright/test';
+import { expect, Page, test } from '@playwright/test';
+
 import { CernToolbar } from '../models/toolbar';
 
 let page: Page;

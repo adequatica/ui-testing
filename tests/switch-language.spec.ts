@@ -1,6 +1,7 @@
-import { test, expect, Page } from '@playwright/test';
-import { CernToolbar } from '../models/toolbar';
+import { expect, Page, test } from '@playwright/test';
+
 import { CernLanguageSwitcher } from '../models/language-switcher';
+import { CernToolbar } from '../models/toolbar';
 
 let page: Page;
 
