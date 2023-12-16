@@ -28,12 +28,13 @@ test('Home page toolbar on mobile', async () => {
 
   await test.step('Should have toolbar', async () => {
     const toolbar = new CernToolbar(page);
-    await toolbar.waitForToolbarVisibility();
+    const topToolbar = await toolbar.getToolbar();
+    await expect(topToolbar, 'Should have visible toolbar').toBeVisible();
   });
 
   await test.step('Should not have toolbar subtitle', async () => {
-    // Wait for locator's state https://playwright.dev/docs/api/class-locator#locator-wait-for
-    await page.getByText('Accelerating science').waitFor({ state: 'hidden' });
+    const toolbar = new CernToolbar(page);
+    await toolbar.waitForVisibleText('Accelerating science', false);
   });
 
   await test.step('Should have closed mobile menu', async () => {

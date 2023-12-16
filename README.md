@@ -15,25 +15,29 @@ Example website for testing: [CERN](https://home.cern).
 1. Clone repository
 2. Install dependencies: `npm install`
 3. Install dependencies for testing framework: `npm run test:install-deps`
-4. Run tests: `npm run test`
+4. Run tests: `npm test`
 
 ### CLI Options
 
 - Different tested host could be passed to tests through .env variable:
 
-`BASE_URL=https://home.cern npm run test`
-
-- Run tests in [debug mode](https://playwright.dev/docs/debug#pwdebug):
-
-`npm run test:debug`
+`BASE_URL=https://home.cern npm test`
 
 - Run a single test (for example: `switch-language.spec.ts`):
 
-`npm run test tests/switch-language.spec.ts`
+`npm test tests/switch-language.spec.ts`
 
 Or:
 
-`npm run test -- --grep language`
+`npm test -- --grep language`
+
+- Run a single test in [debug mode](https://playwright.dev/docs/debug#pwdebug):
+
+`npm run test:debug -- --grep language`
+
+Or:
+
+`npm test -- --debug --grep language`
 
 ## Examples of Test Cases
 

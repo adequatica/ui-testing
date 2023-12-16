@@ -21,7 +21,8 @@ test('Home page toolbar', async ({ page }) => {
 
   await test.step('Should have toolbar', async () => {
     const toolbar = new CernToolbar(page);
-    await toolbar.waitForToolbarVisibility();
+    const topToolbar = await toolbar.getToolbar();
+    await expect(topToolbar, 'Should have visible toolbar').toBeVisible();
   });
 
   await test.step('Should have proper toolbar title', async () => {
