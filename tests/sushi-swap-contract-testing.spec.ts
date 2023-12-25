@@ -1,3 +1,5 @@
+// This test cases illustrate the article «API Contract Testing on Frontend with Playwright»
+// https://adequatica.medium.com/api-contract-testing-on-frontend-with-playwright-4509b74b3008
 import { expect, type Page, test } from '@playwright/test';
 import { z } from 'zod';
 
