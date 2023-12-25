@@ -15,7 +15,7 @@ export class CernToolbar {
     this.expandedNavbar = page.locator('.navbar-collapse.collapse.in');
   }
 
-  async getToolbar (): Promise<Locator> {
+  async getToolbar(): Promise<Locator> {
     return await this.toolbar;
   }
 
