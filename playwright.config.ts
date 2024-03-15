@@ -29,7 +29,7 @@ const config: PlaywrightTestConfig = {
   maxFailures: process.env.CI ? 10 : undefined,
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
   reporter: [
-    ['list'],
+    [process.env.CI ? 'github' : 'list'],
     [
       'html',
       {
