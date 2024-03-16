@@ -1,5 +1,7 @@
 # UI Testing with TypeScript and Playwright
 
+[![Run Playwright Tests](https://github.com/adequatica/ui-testing/actions/workflows/run-playwright-tests.yaml/badge.svg?branch=main)](https://github.com/adequatica/ui-testing/actions/workflows/run-playwright-tests.yaml)
+
 ## Stack
 
 A basic set of packages to test UI with TypeScript:
