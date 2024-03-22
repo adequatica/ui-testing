@@ -1,4 +1,4 @@
-// This test cases illustrate the article «API Contract Testing on Frontend with Playwright»
+// This test case illustrates the article «API Contract Testing on Frontend with Playwright»
 // https://adequatica.medium.com/api-contract-testing-on-frontend-with-playwright-4509b74b3008
 import { expect, type Page, test } from '@playwright/test';
 import { z } from 'zod';
@@ -32,6 +32,7 @@ test.beforeAll(async ({ browser }) => {
   );
 });
 
+// Сommand to run this test:
 // BASE_URL=https://www.sushi.com npm test -- --debug --grep sushi
 test('Open Sushi Swap', async () => {
   test.skip(baseURL != 'https://www.sushi.com', 'Works only in the given URL');
