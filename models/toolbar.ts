@@ -44,4 +44,13 @@ export class CernToolbar {
       state: visibleState ? 'visible' : 'hidden',
     });
   }
+
+  async focusAfterTab(): Promise<string | null> {
+    await this.page.keyboard.press('Tab');
+    const focus = await this.page.evaluate(() => {
+      const selector = document.activeElement;
+      return selector ? selector.innerHTML : null;
+    });
+    return focus;
+  }
 }

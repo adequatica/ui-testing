@@ -43,10 +43,11 @@ Or:
 
 ## Examples of Test Cases
 
+Most of these test cases illustrate the article [Hidden Gems of Playwright](https://adequatica.medium.com/hidden-gems-of-playwright-68fcf8896bcb), unless otherwise specified:
+
+- `keyboard-navigation-on-tab.spec.ts` — example of [Automated Accessibility Testing of Keyboard Navigation on Tab](https://adequatica.medium.com/automated-accessibility-testing-of-keyboard-navigation-on-tab-89d30087c111);
 - `sushi-swap-contract-testing.spec.ts` — example of [API Contract Testing](https://adequatica.medium.com/api-contract-testing-on-frontend-with-playwright-4509b74b3008) with [Zod](https://zod.dev/) JSON schema validation;
 - `switch-language.spec.ts` — has example of [test.fixme()](https://playwright.dev/docs/api/class-test#test-fixme-2) method;
 - `toolbar-mobile.spec.ts` — has example of redefining the [browser context](https://playwright.dev/docs/api/class-browsercontext);
 - `toolbar-throught-describe.spec.ts` — has example of [test.describe.configure()](https://playwright.dev/docs/api/class-test#test-describe-configure) method;
 - `toolbar-throught-step.spec.ts` — has examples of [test.slow()](https://playwright.dev/docs/api/class-test#test-slow-1), [test.step()](https://playwright.dev/docs/api/class-test#test-step) and [expect.soft()](https://playwright.dev/docs/test-assertions#soft-assertions) methods.
-
-Most of these test cases illustrate the article [Hidden Gems of Playwright](https://adequatica.medium.com/hidden-gems-of-playwright-68fcf8896bcb).
