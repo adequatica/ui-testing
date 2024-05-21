@@ -63,6 +63,6 @@ export class CernToolbar {
   }
 
   async getOpenedOverlay(): Promise<Locator> {
-    return await this.openMenu;
+    return await this.openMenu.first();
   }
 }
