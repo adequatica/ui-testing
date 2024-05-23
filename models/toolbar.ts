@@ -4,15 +4,21 @@ export class CernToolbar {
   private page: Page;
   private toolbar: Locator;
   private header: Locator;
-  private toggle: Locator;
+  private navbarToggle: Locator;
   private expandedNavbar: Locator;
+  private dropdownNavbar: Locator;
+  private openMenu: Locator;
+  private signIn: Locator;
 
   constructor(page: Page) {
     this.page = page;
     this.toolbar = page.locator('#cern-toolbar');
     this.header = page.locator('header');
-    this.toggle = page.locator('button.navbar-toggle');
+    this.navbarToggle = page.locator('button.navbar-toggle');
     this.expandedNavbar = page.locator('.navbar-collapse.collapse.in');
+    this.dropdownNavbar = page.locator('.dropdown-toggle');
+    this.openMenu = page.locator('[class*=open-cern-menu]');
+    this.signIn = page.locator('[class*=cern-signin]');
   }
 
   async getToolbar(): Promise<Locator> {
@@ -28,7 +34,11 @@ export class CernToolbar {
   }
 
   async clickOnToggle(): Promise<void> {
-    await this.toggle.click();
+    await this.navbarToggle.click();
+  }
+
+  async clickOnSignIn(): Promise<void> {
+    await this.signIn.click();
   }
 
   async waitForExpandedNavbar(visibleState: boolean): Promise<void> {
@@ -52,5 +62,13 @@ export class CernToolbar {
       return selector ? selector.innerHTML : null;
     });
     return focus;
+  }
+
+  async clickOnMenuItem(itemName: string): Promise<void> {
+    await this.dropdownNavbar.getByText(itemName).click();
+  }
+
+  async getOpenedOverlay(): Promise<Locator> {
+    return await this.openMenu.first();
   }
 }

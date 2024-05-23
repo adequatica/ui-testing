@@ -1,5 +1,5 @@
 {
-  "include": ["tests", "./playwright.config.ts", "models"],
+  "include": ["./playwright.config.ts", "helpers", "models", "tests"],
   "compilerOptions": {
     "target": "es2020",
     "module": "es2020",
