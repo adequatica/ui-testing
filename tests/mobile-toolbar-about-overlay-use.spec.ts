@@ -1,5 +1,6 @@
 import { devices, expect, test } from '@playwright/test';
 
+import { openHomePage } from '../helpers/open-home-page';
 import { CernToolbar } from '../models/toolbar';
 
 // https://playwright.dev/docs/api/class-testoptions/
@@ -22,8 +23,9 @@ test(
     tag: '@mobile',
   },
   async ({ page }) => {
-    await test.step('Open the page', async () => {
-      await page.goto('/');
+    // openHomePage is a helper function
+    await test.step('Open the page', async () => openHomePage(page), {
+      box: true,
     });
 
     await test.step('Should have toolbar', async () => {

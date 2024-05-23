@@ -8,6 +8,7 @@ export class CernToolbar {
   private expandedNavbar: Locator;
   private dropdownNavbar: Locator;
   private openMenu: Locator;
+  private signIn: Locator;
 
   constructor(page: Page) {
     this.page = page;
@@ -17,6 +18,7 @@ export class CernToolbar {
     this.expandedNavbar = page.locator('.navbar-collapse.collapse.in');
     this.dropdownNavbar = page.locator('.dropdown-toggle');
     this.openMenu = page.locator('[class*=open-cern-menu]');
+    this.signIn = page.locator('[class*=cern-signin]');
   }
 
   async getToolbar(): Promise<Locator> {
@@ -33,6 +35,10 @@ export class CernToolbar {
 
   async clickOnToggle(): Promise<void> {
     await this.navbarToggle.click();
+  }
+
+  async clickOnSignIn(): Promise<void> {
+    await this.signIn.click();
   }
 
   async waitForExpandedNavbar(visibleState: boolean): Promise<void> {
