@@ -21,7 +21,7 @@ const config: PlaywrightTestConfig = {
   /* Retry on CI only. */
   retries: process.env.CI ? 1 : 0,
   /* Opt out of parallel tests on CI. */
-  workers: process.env.CI ? 1 : undefined,
+  workers: process.env.CI ? undefined : 2,
   /**
    * The maximum number of test failures for the whole test suite run.
    * See https://playwright.dev/docs/api/class-testconfig#test-config-max-failures.

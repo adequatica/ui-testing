@@ -17,16 +17,16 @@
   },
   "dependencies": {
     "@playwright/test": "1.42.1",
-    "zod": "3.22.4"
+    "zod": "3.23.8"
   },
   "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "6.12.0",
-    "@typescript-eslint/parser": "6.12.0",
-    "@types/node": "20.10.0",
-    "eslint": "8.55.0",
-    "eslint-plugin-simple-import-sort": "10.0.0",
-    "prettier": "3.1.0",
-    "typescript": "5.2.2"
+    "@typescript-eslint/eslint-plugin": "7.12.0",
+    "@typescript-eslint/parser": "7.12.0",
+    "@types/node": "20.14.2",
+    "eslint": "8.56.0",
+    "eslint-plugin-simple-import-sort": "12.1.0",
+    "prettier": "3.3.1",
+    "typescript": "5.4.5"
   },
   "scripts": {
     "format": "npx prettier --write .",
