@@ -53,7 +53,8 @@ All tests are synthetic and written in different «styles» and approaches with 
 - `mobile-toolbar-about-overlay-use.spec.ts` — has an example of rewriting config through [test.use()](https://playwright.dev/docs/api/class-test#test-use) with a [boxed step](https://playwright.dev/docs/release-notes#hide-implementation-details-box-test-steps);
 - `mobile-toolbar-newcontext.spec.ts` — has an example of redefining the [browser context](https://playwright.dev/docs/api/class-browsercontext) with a [boxed step](https://playwright.dev/docs/release-notes#hide-implementation-details-box-test-steps);
 - `open-sign-in.spec.ts` — has an example of [expect.toPass](https://playwright.dev/docs/test-assertions#expecttopass) assertion;
-- `sushi-swap-contract-testing.spec.ts` — example of [API Contract Testing](https://adequatica.medium.com/api-contract-testing-on-frontend-with-playwright-4509b74b3008) with [Zod](https://zod.dev/) JSON schema validation;
+- `sushi-swap-contract-testing.spec.ts` — example of [API Contract Testing](https://adequatica.medium.com/api-contract-testing-on-frontend-with-playwright-4509b74b3008) with [Zod](https://zod.dev/) schema validation;
+- `sushi-swap-custom-matcher.spec.ts` — example of usage [custom matchers](https://playwright.dev/docs/test-assertions#add-custom-matchers-using-expectextend) for [Zod](https://zod.dev/) schema validation;
 - `switch-language.spec.ts` — has an example of [test.fixme()](https://playwright.dev/docs/api/class-test#test-fixme-2) method;
 - `toolbar-throught-describe.spec.ts` — has an example of [test.describe.configure()](https://playwright.dev/docs/api/class-test#test-describe-configure) method;
 - `toolbar-throught-step.spec.ts` — has examples of [test.slow()](https://playwright.dev/docs/api/class-test#test-slow-1), [test.step()](https://playwright.dev/docs/api/class-test#test-step) and [expect.soft()](https://playwright.dev/docs/test-assertions#soft-assertions) methods.

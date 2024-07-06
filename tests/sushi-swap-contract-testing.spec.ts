@@ -10,8 +10,6 @@ const schema = z.object({
   jsonrpc: z.string(),
   id: z.number(),
   method: z.string(),
-  // Array's items can be string or boolean https://zod.dev/?id=unions
-  params: z.array(z.union([z.string(), z.boolean()])),
 });
 
 let page: Page;
@@ -33,7 +31,7 @@ test.beforeAll(async ({ browser }) => {
 });
 
 // Сommand to run this test:
-// BASE_URL=https://www.sushi.com npm test -- --debug --grep sushi
+// BASE_URL=https://www.sushi.com npm test -- --grep sushi-swap-contract-testing
 test('Open Sushi Swap', async () => {
   test.skip(baseURL != 'https://www.sushi.com', 'Works only in the given URL');
   // Waiting for a request should be before .goto() method,
