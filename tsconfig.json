@@ -1,8 +1,14 @@
 {
-  "include": ["./playwright.config.ts", "helpers", "models", "tests"],
+  "include": [
+    "./playwright.config.ts",
+    "esling.config.mjs",
+    "helpers",
+    "models",
+    "tests"
+  ],
   "compilerOptions": {
-    "target": "es2020",
-    "module": "es2020",
+    "target": "es2023",
+    "module": "ESNext",
     "esModuleInterop": true,
     "moduleResolution": "node",
     "forceConsistentCasingInFileNames": true,
