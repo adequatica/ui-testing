@@ -10,7 +10,7 @@ A basic set of packages to test UI with TypeScript:
 - [Prettier](https://prettier.io) — code formatter;
 - [ESLint](https://eslint.org/) — code linter.
 
-Example website for testing: [CERN](https://home.cern), unless otherwise specified.
+Example website for testing as a default `baseURL`: [CERN](https://home.cern), unless otherwise specified.
 
 ## How to Use
 
@@ -23,27 +23,39 @@ Example website for testing: [CERN](https://home.cern), unless otherwise specifi
 
 - Different tested host could be passed to tests through .env variable:
 
-`BASE_URL=https://home.cern npm test`
+```
+BASE_URL=https://home.cern npm test
+```
 
 - Run tests [filtered by tag](https://playwright.dev/docs/test-annotations#tag-tests):
 
-`npm test -- --grep @mobile`
+```
+npm test -- --grep @mobile
+```
 
 - Run a single test (for example: `switch-language.spec.ts`):
 
-`npm test tests/switch-language.spec.ts`
+```
+npm test tests/switch-language.spec.ts
+```
 
 Or:
 
-`npm test -- --grep language`
+```
+npm test -- --grep language
+```
 
 - Run tests in [debug mode](https://playwright.dev/docs/debug#pwdebug):
 
-`npm test -- --debug --grep language`
+```
+npm test -- --debug --grep language
+```
 
 Or through the custom command:
 
-`npm run test:debug -- --grep language`
+```
+npm run test:debug -- --grep language
+```
 
 ## Examples of Test Cases
 
