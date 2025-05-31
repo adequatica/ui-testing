@@ -61,6 +61,7 @@ npm run test:debug -- --grep language
 
 All tests are synthetic and written in different «styles» and approaches with the intent to demonstrate various cases from the articles [Hidden Gems of Playwright](https://adequatica.medium.com/hidden-gems-of-playwright-68fcf8896bcb) and [Part 2](https://adequatica.medium.com/hidden-gems-of-playwright-part-2-ca3e38a5954a), unless otherwise specified:
 
+- `atlas-postcard-price.spec.ts` — example of [Automation Testing with Playwright MCP Server](https://adequatica.medium.com/generative-automation-testing-with-playwright-mcp-server-45e9b8f6f92a);
 - `keyboard-navigation-on-tab.spec.ts` — example of [Automated Accessibility Testing of Keyboard Navigation on Tab](https://adequatica.medium.com/automated-accessibility-testing-of-keyboard-navigation-on-tab-89d30087c111);
 - `mobile-toolbar-about-overlay-use.spec.ts` — has an example of rewriting config through [test.use()](https://playwright.dev/docs/api/class-test#test-use) with a [boxed step](https://playwright.dev/docs/release-notes#hide-implementation-details-box-test-steps);
 - `mobile-toolbar-newcontext.spec.ts` — has an example of redefining the [browser context](https://playwright.dev/docs/api/class-browsercontext) with a [boxed step](https://playwright.dev/docs/release-notes#hide-implementation-details-box-test-steps);
