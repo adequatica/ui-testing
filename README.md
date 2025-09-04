@@ -59,14 +59,14 @@ npm run test:debug -- --grep language
 
 ## Examples of Test Cases
 
-All tests are synthetic and written in different «styles» and approaches with the intent to demonstrate various cases from the articles [Hidden Gems of Playwright](https://adequatica.medium.com/hidden-gems-of-playwright-68fcf8896bcb) and [Part 2](https://adequatica.medium.com/hidden-gems-of-playwright-part-2-ca3e38a5954a), unless otherwise specified:
+All tests are synthetic and written in different «styles» and approaches with the intent to demonstrate various cases from the articles [Hidden Gems of Playwright](https://adequatica.github.io/2022/09/07/hidden-gems-of-playwright.html) and [Part 2](https://adequatica.github.io/2024/05/23/hidden-gems-of-playwright-part-2.html), unless otherwise specified:
 
-- `atlas-postcard-price.spec.ts` — example of [Automation Testing with Playwright MCP Server](https://adequatica.medium.com/generative-automation-testing-with-playwright-mcp-server-45e9b8f6f92a);
-- `keyboard-navigation-on-tab.spec.ts` — example of [Automated Accessibility Testing of Keyboard Navigation on Tab](https://adequatica.medium.com/automated-accessibility-testing-of-keyboard-navigation-on-tab-89d30087c111);
+- `atlas-postcard-price.spec.ts` — example of [Automation Testing with Playwright MCP Server](https://adequatica.github.io/2025/05/31/generative-automation-testing-with-playwright-mcp-server.html);
+- `keyboard-navigation-on-tab.spec.ts` — example of [Automated Accessibility Testing of Keyboard Navigation on Tab](https://adequatica.github.io/2024/03/25/automated-accessibility-testing-of-keyboard-navigation-on-tab.html);
 - `mobile-toolbar-about-overlay-use.spec.ts` — has an example of rewriting config through [test.use()](https://playwright.dev/docs/api/class-test#test-use) with a [boxed step](https://playwright.dev/docs/release-notes#hide-implementation-details-box-test-steps);
 - `mobile-toolbar-newcontext.spec.ts` — has an example of redefining the [browser context](https://playwright.dev/docs/api/class-browsercontext) with a [boxed step](https://playwright.dev/docs/release-notes#hide-implementation-details-box-test-steps);
 - `open-sign-in.spec.ts` — has an example of [expect.toPass](https://playwright.dev/docs/test-assertions#expecttopass) assertion;
-- `sushi-swap-contract-testing.spec.ts` — example of [API Contract Testing](https://adequatica.medium.com/api-contract-testing-on-frontend-with-playwright-4509b74b3008) with [Zod](https://zod.dev/) schema validation;
+- `sushi-swap-contract-testing.spec.ts` — example of [API Contract Testing](https://adequatica.github.io/2023/12/25/api-contract-testing-on-frontend-with-playwright.html) with [Zod](https://zod.dev/) schema validation;
 - `sushi-swap-custom-matcher.spec.ts` — example of usage [custom matchers](https://playwright.dev/docs/test-assertions#add-custom-matchers-using-expectextend) for [Zod](https://zod.dev/) schema validation;
 - `switch-language.spec.ts` — has an example of [test.fixme()](https://playwright.dev/docs/api/class-test#test-fixme-2) method;
 - `toolbar-throught-describe.spec.ts` — has an example of [test.describe.configure()](https://playwright.dev/docs/api/class-test#test-describe-configure) method;
