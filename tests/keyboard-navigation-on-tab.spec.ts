@@ -1,5 +1,5 @@
 // This test case illustrates the article «Automated Accessibility Testing of Keyboard Navigation on Tab»
-// https://adequatica.medium.com/automated-accessibility-testing-of-keyboard-navigation-on-tab-89d30087c111
+// https://adequatica.github.io/2024/03/25/automated-accessibility-testing-of-keyboard-navigation-on-tab.html
 import { expect, test } from '@playwright/test';
 
 import { CernToolbar } from '../models/toolbar';
