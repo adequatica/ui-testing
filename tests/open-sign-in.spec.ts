@@ -5,7 +5,7 @@ import { CernToolbar } from '../models/toolbar';
 
 let toolbar: CernToolbar;
 
-test.beforeEach(async ({ page }) => {
+test.beforeEach(({ page }) => {
   toolbar = new CernToolbar(page);
 });
 

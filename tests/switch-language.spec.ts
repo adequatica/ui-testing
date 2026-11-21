@@ -14,7 +14,7 @@ test.afterAll(async () => {
   await page.close();
 });
 
-test.describe('Switch language', async () => {
+test.describe('Switch language', () => {
   // Running tests sequentially
   // See https://playwright.dev/docs/api/class-test#test-describe-configure
   test.describe.configure({ mode: 'serial' });

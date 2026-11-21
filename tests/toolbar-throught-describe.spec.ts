@@ -13,7 +13,7 @@ test.afterAll(async () => {
   await page.close();
 });
 
-test.describe('Home page toolbar', async () => {
+test.describe('Home page toolbar', () => {
   // Running tests sequentially
   // See https://playwright.dev/docs/api/class-test#test-describe-configure
   test.describe.configure({ mode: 'serial' });

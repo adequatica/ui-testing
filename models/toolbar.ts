@@ -59,8 +59,10 @@ export class CernToolbar {
     await this.page.keyboard.press('Tab');
     const focus = await this.page.evaluate(() => {
       const selector = document.activeElement;
+
       return selector ? selector.innerHTML : null;
     });
+
     return focus;
   }
 
