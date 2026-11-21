@@ -6,9 +6,9 @@ export class CernLanguageSwitcher {
   private langFr: Locator;
 
   constructor(page: Page) {
-    this.lang = page.locator('.cern-menu-lang-switcher');
-    this.langEn = page.locator('.en');
-    this.langFr = page.locator('.fr');
+    this.lang = page.locator('#current-lang-toggle');
+    this.langEn = page.getByRole('link', { name: 'English' });
+    this.langFr = page.getByRole('link', { name: 'Français' });
   }
 
   async switchLang(language: 'english' | 'french'): Promise<void> {

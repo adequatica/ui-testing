@@ -35,21 +35,11 @@ test(
 
     await test.step('Should have closed mobile menu', async () => {
       await toolbar.waitForExpandedNavbar(false);
-      const toolbarHeader = await toolbar.getToolbarHeader();
-      await expect(
-        toolbarHeader,
-        'Header should not have "class" attribute',
-      ).not.toHaveAttribute('class');
     });
 
     await test.step('Should open mobile menu', async () => {
       await toolbar.clickOnToggle();
       await toolbar.waitForExpandedNavbar(true);
-      const toolbarHeader = await toolbar.getToolbarHeader();
-      await expect(
-        toolbarHeader,
-        'Header should have "class" attribute',
-      ).toHaveAttribute('class');
     });
 
     await test.step('Should open about overlay', async () => {

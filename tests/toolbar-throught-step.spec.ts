@@ -27,7 +27,7 @@ test('Home page toolbar', async ({ page }) => {
 
   await test.step('Should have proper toolbar title', async () => {
     const toolbar = new CernToolbar(page);
-    const toolbarH1 = await toolbar.getToolbarH1();
+    const toolbarH1 = await toolbar.getToolbarNavbar();
     await expect(toolbarH1, 'Should have "CERN" in toolbar title').toHaveText(
       /CERN/,
     );

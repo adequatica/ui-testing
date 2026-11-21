@@ -6,27 +6,27 @@ export class CernToolbar {
   private header: Locator;
   private navbarToggle: Locator;
   private expandedNavbar: Locator;
-  private dropdownNavbar: Locator;
+  private closeButton: Locator;
   private openMenu: Locator;
   private signIn: Locator;
 
   constructor(page: Page) {
     this.page = page;
-    this.toolbar = page.locator('#cern-toolbar');
-    this.header = page.locator('header');
-    this.navbarToggle = page.locator('button.navbar-toggle');
-    this.expandedNavbar = page.locator('.navbar-collapse.collapse.in');
-    this.dropdownNavbar = page.locator('.dropdown-toggle');
-    this.openMenu = page.locator('[class*=open-cern-menu]');
-    this.signIn = page.locator('[class*=cern-signin]');
+    this.toolbar = page.locator('#header-sso');
+    this.header = page.locator('#header-container');
+    this.navbarToggle = page.getByRole('button', { name: 'Toggle Menu' });
+    this.expandedNavbar = page.locator('#mega-menu-header-nav');
+    this.closeButton = page.getByRole('button', { name: 'Close' });
+    this.openMenu = page.locator('[class*=mega-sub-menu]');
+    this.signIn = page.getByRole('link', { name: 'Sign In' });
   }
 
   async getToolbar(): Promise<Locator> {
     return await this.toolbar;
   }
 
-  async getToolbarH1(): Promise<Locator> {
-    return await this.toolbar.locator('h1');
+  async getToolbarNavbar(): Promise<Locator> {
+    return await this.toolbar.locator('nav');
   }
 
   async getToolbarHeader(): Promise<Locator> {
@@ -44,7 +44,7 @@ export class CernToolbar {
   async waitForExpandedNavbar(visibleState: boolean): Promise<void> {
     // Wait for state https://playwright.dev/docs/api/class-locator#locator-wait-for
     await this.expandedNavbar.waitFor({
-      state: visibleState ? 'visible' : 'detached',
+      state: visibleState ? 'visible' : 'hidden',
     });
   }
 
@@ -67,10 +67,14 @@ export class CernToolbar {
   }
 
   async clickOnMenuItem(itemName: string): Promise<void> {
-    await this.dropdownNavbar.getByText(itemName).click();
+    await this.expandedNavbar.getByRole('button', { name: itemName }).click();
   }
 
   async getOpenedOverlay(): Promise<Locator> {
     return await this.openMenu.first();
+  }
+
+  async closeMenu(): Promise<void> {
+    await this.closeButton.click();
   }
 }

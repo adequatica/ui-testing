@@ -25,7 +25,7 @@ test.describe('Switch language', () => {
 
   test('Should have english toolbar title', async () => {
     const toolbar = new CernToolbar(page);
-    const toolbarH1 = await toolbar.getToolbarH1();
+    const toolbarH1 = await toolbar.getToolbarNavbar();
     await expect(
       toolbarH1,
       'Should have "Accelerating science" in toolbar title',
@@ -35,7 +35,7 @@ test.describe('Switch language', () => {
   test('Should have english language in navigation', async () => {
     const languageSwitcher = new CernLanguageSwitcher(page);
     const lang = await languageSwitcher.getLang();
-    await expect(lang, 'Should have "EN" language').toHaveText(/en/);
+    await expect(lang, 'Should have "English" language').toHaveText(/English/);
   });
 
   test('Should change URL after switch language', async () => {
@@ -47,16 +47,9 @@ test.describe('Switch language', () => {
   test('Should have french language in navigation', async () => {
     const languageSwitcher = new CernLanguageSwitcher(page);
     const lang = await languageSwitcher.getLang();
-    await expect(lang, 'Should have "FR" language').toHaveText(/fr/);
-  });
-
-  test('Should have french toolbar title', async () => {
-    const toolbar = new CernToolbar(page);
-    const toolbarH1 = await toolbar.getToolbarH1();
-    await expect(
-      toolbarH1,
-      'Should have "Accélérateur de science" in toolbar title',
-    ).toHaveText(/Accélérateur de science/);
+    await expect(lang, 'Should have "Français" language').toHaveText(
+      /Français/,
+    );
   });
 
   test('Should have proper page title', async () => {

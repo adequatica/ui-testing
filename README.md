@@ -71,3 +71,5 @@ All tests are synthetic and written in different «styles» and approaches with 
 - `switch-language.spec.ts` — has an example of [test.fixme()](https://playwright.dev/docs/api/class-test#test-fixme-2) method;
 - `toolbar-throught-describe.spec.ts` — has an example of [test.describe.configure()](https://playwright.dev/docs/api/class-test#test-describe-configure) method;
 - `toolbar-throught-step.spec.ts` — has examples of [test.slow()](https://playwright.dev/docs/api/class-test#test-slow-1), [test.step()](https://playwright.dev/docs/api/class-test#test-step) and [expect.soft()](https://playwright.dev/docs/test-assertions#soft-assertions) methods.
+
+P.S. The examples in the articles may differ from the current state of the repository, as the tests had to be updated due to changes in the layout of the [CERN](https://home.cern)’s website.

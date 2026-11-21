@@ -1,16 +1,15 @@
-// This test case illustrates the article «Automated Accessibility Testing of Keyboard Navigation on Tab»
-// https://adequatica.github.io/2024/03/25/automated-accessibility-testing-of-keyboard-navigation-on-tab.html
+/*
+ * This test case illustrates the article «Automated Accessibility Testing of Keyboard Navigation on Tab»
+ * https://adequatica.github.io/2024/03/25/automated-accessibility-testing-of-keyboard-navigation-on-tab.html
+ *
+ * The example in the articles may differ from the current state of the repository,
+ * as the tests had to be updated due to changes in the layout of the [CERN](https://home.cern)'s website.
+ */
 import { expect, test } from '@playwright/test';
 
 import { CernToolbar } from '../models/toolbar';
 
-const activeElements = [
-  '\n	Skip to main content\n',
-  '\n            CERN\n            <span>Accelerating science</span>\n        ',
-  'Sign in',
-  'Directory',
-  '\n              <img src="/sites/default/files/logo/cern-logo.png" alt="home">\n            ',
-] as const;
+const activeElements = ['Skip to content'] as const;
 
 test(
   'Keyboard Navigation',

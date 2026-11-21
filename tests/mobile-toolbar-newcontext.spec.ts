@@ -39,30 +39,21 @@ test(
       await expect(topToolbar, 'Should have visible toolbar').toBeVisible();
     });
 
-    await test.step('Should not have toolbar subtitle', async () => {
-      const toolbar = new CernToolbar(page);
-      await toolbar.waitForVisibleText('Accelerating science', false);
-    });
-
-    await test.step('Should have closed mobile menu', async () => {
+    await test.step('Should not have opened mobile menu', async () => {
       const toolbar = new CernToolbar(page);
       await toolbar.waitForExpandedNavbar(false);
-      const toolbarHeader = await toolbar.getToolbarHeader();
-      await expect(
-        toolbarHeader,
-        'Header should not have "class" attribute',
-      ).not.toHaveAttribute('class');
     });
 
     await test.step('Should open mobile menu', async () => {
       const toolbar = new CernToolbar(page);
       await toolbar.clickOnToggle();
       await toolbar.waitForExpandedNavbar(true);
-      const toolbarHeader = await toolbar.getToolbarHeader();
-      await expect(
-        toolbarHeader,
-        'Header should have "class" attribute',
-      ).toHaveAttribute('class');
+    });
+
+    await test.step('Should close mobile menu', async () => {
+      const toolbar = new CernToolbar(page);
+      await toolbar.closeMenu();
+      await toolbar.waitForExpandedNavbar(false);
     });
   },
 );
